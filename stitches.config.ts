@@ -13,11 +13,18 @@ export const {
   theme: {
     colors: {
       background: '#F8FBFE',
-      violet: '#370665',
-      purple: '#6C5CE7',
+      primary: '#370665',
+      secondary: '#33286D',
+      accent: '#6C5CE7',
     },
     fonts: {
       general: 'Poppins, sans-serif',
+    },
+    fontWeights: {
+      regular: '400',
+      medium: '500',
+      semiBold: '600',
+      bold: '700',
     },
     radii: {
       borderRadius: '4px',
@@ -34,81 +41,56 @@ export const {
   // },
 })
 
+// export const darkTheme = createTheme({
+//   colors: {
+//     background: '#090011',
+//     primary: '#F8FBFE',
+//     secondary: '#AEB7C1',
+//     accent: '#6C5CE7',
+//   },
+// })
+
 const globalStyles = globalCss({
   '*': {
     fontFamily: '$general',
+    fontWeight: '$regular',
   },
-
   'html, body': {
     margin: '0',
     padding: '0',
     WebkitFontSmoothing: 'antialiased',
     background: '$background',
   },
-
-  figure: {
-    margin: 0,
-  },
-
   h1: {
-    fontFamily: '$general',
-    fontSize: '48px',
-    lineHeight: '50px',
-    margin: '0 0 20px',
     color: '$primary',
+    fontFamily: '$general',
+    fontSize: '42px',
+    fontWeight: '$bold',
+    lineHeight: '46px',
+    margin: '0 0 20px',
   },
-
   h2: {
     color: '$primary',
     margin: '60px 0 0',
     fontSize: '24px',
   },
-
-  'h3, h3 a': {
-    color: '$primary',
-    fontSize: '18px',
-    margin: '20px 0 0',
-  },
-
-  ul: {
-    margin: 0,
-  },
-
-  img: {
-    borderRadius: '8px',
-    minWidth: '100%',
-    maxWidth: '100%',
-  },
-
   p: {
+    color: '$secondary',
     margin: '20px 0',
-    color: '$secondary',
   },
-
   strong: {
-    color: '$primary',
-    fontWeight: 500,
+    color: '$accent',
+    fontWeight: '$semiBold',
   },
-
-  blockquote: {
-    borderLeft: '4px solid $hover',
-    color: '$secondary',
-    fontStyle: 'italic',
-    margin: '0',
-    paddingLeft: '20px',
-  },
-
-  a: {
-    borderBottom: '1px solid $primary',
-    color: '$primary',
-    textDecoration: 'none',
-    transition: 'opacity $duration ease-in-out',
-  },
-
-  'a:hover, a:focus': {
-    opacity: '0.8',
-  },
-
+  // a: {
+  //   borderBottom: '1px solid $primary',
+  //   color: '$primary',
+  //   textDecoration: 'none',
+  //   transition: 'opacity $duration ease-in-out',
+  // },
+  // 'a:hover, a:focus': {
+  //   opacity: '0.8',
+  // },
   '@font-face': [
     {
       fontFamily: 'Poppins',
