@@ -1,24 +1,26 @@
 import { styled } from '../stitches.config'
 
-export const Title = styled('h1', {
-  marginBottom: '6px',
-})
-
-export const Subtitle = styled('h2', {
-  margin: '0 0 16px',
-})
+import Layout from '../layouts'
 
 export default function Home() {
   return (
-    <>
-      <Title>Bruno Aderaldo</Title>
-      <Subtitle>
-        Frontend Developer at <strong>Bejamas</strong>
-      </Subtitle>
-      <p>
-        Building <strong>websites & web apps</strong> with modern and decoupled
-        architeture <strong>using Jamstack</strong>.
-      </p>
-    </>
+    <Layout>
+      <div>
+        <Title>Bruno Aderaldo</Title>
+        <Subtitle>Frontend Developer at Bejamas</Subtitle>
+        <p>
+          Building <strong>websites & web apps</strong> with modern and
+          decoupled architeture.
+        </p>
+      </div>
+    </Layout>
   )
 }
+
+const Title = styled('h1', {
+  marginBottom: '6px',
+})
+
+const Subtitle = styled('h2', {
+  margin: '0 0 16px',
+})
