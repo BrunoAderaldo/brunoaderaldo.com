@@ -3,21 +3,23 @@ import { useRouter } from 'next/router'
 
 import { styled } from '../stitches.config'
 
+import Header from '../components/Header'
+
 export default function Layout(props) {
+  const router = useRouter()
+
   const { children, ...customMeta } = props
 
   const meta = {
     title: 'Bruno Aderaldo – Frontend Developer',
-    description: `Frontend Developer, JavaScript enthusiast.`,
+    description: 'Frontend Developer, JavaScript enthusiast.',
     image: 'https://brunoaderaldo.com/static/images/banner.png',
     type: 'website',
     ...customMeta,
   }
 
-  const router = useRouter()
-
   return (
-    <Wrapper>
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -44,24 +46,16 @@ export default function Layout(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <Main>{children}</Main>
-    </Wrapper>
+      <Wrapper>
+        <Header />
+        <main>{children}</main>
+      </Wrapper>
+    </>
   )
 }
 
 const Wrapper = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  minHeight: '100vh',
-  position: 'relative',
-  zIndex: 0,
-})
-
-const Main = styled('main', {
-  display: 'flex',
-  alignItems: 'center',
   margin: '0 auto',
-  maxWidth: '760px',
-  padding: '0 20px',
-  flex: '1 1',
+  maxWidth: '42rem',
+  padding: '0 1.25rem',
 })
