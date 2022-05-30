@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        <Title>Bruno Aderaldo</Title>
+        <Title>Bruno Aderaldo 🇧🇷</Title>
         <Subtitle>Frontend Developer at Bejamas</Subtitle>
         <p>
           Building <strong>websites & web apps</strong> with modern and
-          decoupled architeture.
+          decoupled architecture.
         </p>
       </div>
     </Layout>
