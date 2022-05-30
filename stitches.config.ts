@@ -13,6 +13,7 @@ export const {
   theme: {
     colors: {
       background: '#090011',
+      background_1: '#30255D',
       primary: '#F8FBFE',
       secondary: '#AEB7C1',
       // accent: '#6C5CE7',
@@ -28,7 +29,7 @@ export const {
       bold: '700',
     },
     radii: {
-      borderRadius: '4px',
+      borderRadius: '0.25rem',
     },
   },
   media: {
@@ -42,6 +43,7 @@ export const {
 export const lightTheme = createTheme({
   colors: {
     background: '#F8FBFE',
+    background_1: '#ECF2FF',
     primary: '#370665',
     secondary: '#33286D',
     // accent: '#6C5CE7',
@@ -63,7 +65,7 @@ const globalStyles = globalCss({
   h1: {
     color: '$primary',
     fontFamily: '$general',
-    fontSize: '32px',
+    fontSize: '30px',
     fontWeight: '$bold',
     lineHeight: '46px',
     margin: '0 0 20px',
