@@ -3,6 +3,13 @@ import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
 
 import { getCssText } from '../stitches.config'
 
+const fonts = [
+  '/fonts/Poppins-Regular.ttf',
+  '/fonts/Poppins-Medium.ttf',
+  '/fonts/Poppins-SemiBold.ttf',
+  '/fonts/Poppins-Bold.ttf',
+]
+
 export default class Document extends NextDocument {
   render() {
     return (
@@ -12,7 +19,16 @@ export default class Document extends NextDocument {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-          {/* Preload fonts? */}
+          {fonts.map(font => (
+            <link
+              key={font}
+              rel="preload"
+              href={font}
+              as="font"
+              type="font/ttf"
+              crossOrigin="anonymous"
+            />
+          ))}
 
           <link
             rel="apple-touch-icon"

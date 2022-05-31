@@ -91,24 +91,28 @@ const globalStyles = globalCss({
       src: `url("/fonts/Poppins-Regular.ttf") format("truetype")`,
       fontWeight: '400',
       fontStyle: 'normal',
+      fontDisplay: 'swap',
     },
     {
       fontFamily: 'Poppins',
       src: `url("/fonts/Poppins-Medium.ttf") format("truetype")`,
       fontWeight: '500',
       fontStyle: 'normal',
+      fontDisplay: 'swap',
     },
     {
       fontFamily: 'Poppins',
       src: `url("/fonts/Poppins-SemiBold.ttf") format("truetype")`,
       fontWeight: '600',
       fontStyle: 'normal',
+      fontDisplay: 'swap',
     },
     {
       fontFamily: 'Poppins',
       src: `url("/fonts/Poppins-Bold.ttf") format("truetype")`,
       fontWeight: '700',
       fontStyle: 'normal',
+      fontDisplay: 'swap',
     },
   ],
 })
