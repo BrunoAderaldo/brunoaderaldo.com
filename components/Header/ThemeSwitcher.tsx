@@ -8,12 +8,16 @@ const ToggleButton = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   border: 0,
-  borderRadius: '$borderRadius',
+  borderRadius: '$roundedLG',
   backgroundColor: '$background_1',
   cursor: 'pointer',
   width: '2.35rem',
   height: '2.35rem',
   marginLeft: 'auto',
+  svg: {
+    width: '1.25rem',
+    height: '1.25rem',
+  },
 })
 
 export default function Header() {

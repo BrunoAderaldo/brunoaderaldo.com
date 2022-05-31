@@ -6,15 +6,7 @@ export default function Home() {
   return (
     <Layout>
       <Intro>
-        <Title>
-          Bruno Aderaldo{' '}
-          <span
-            role="img"
-            aria-label="The flag for Brazil, which may show as the letters BR on some platforms."
-          >
-            🇧🇷
-          </span>
-        </Title>
+        <Title>Bruno Aderaldo</Title>
         <Subtitle>Frontend Developer at Bejamas</Subtitle>
         <p>
           Building <strong>websites & web apps</strong> with modern and

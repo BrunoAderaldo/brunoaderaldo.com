@@ -29,7 +29,10 @@ export const {
       bold: '700',
     },
     radii: {
-      borderRadius: '0.25rem',
+      rounded: '0.25rem',
+      roundedSM: '0.125rem',
+      roundedMD: '0.375rem',
+      roundedLG: '0.5rem',
     },
   },
   media: {
