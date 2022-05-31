@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://brunoaderaldo.com/sitemap.xml
