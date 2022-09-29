@@ -1,0 +1,23 @@
+---
+import styles from "./Project.module.scss";
+
+interface Props {
+  name: string;
+  description: string;
+  github: string;
+  preview: string;
+}
+
+const { name, description, github, preview } = Astro.props;
+---
+
+<div class={styles.item}>
+  <h4 class={styles.name}>{name}</h4>
+  <p class={styles.description}>{description}</p>
+
+  <div class={styles.actions}>
+    <a href={github}>GitHub</a>
+    <span></span>
+    <a href={preview}>Preview</a>
+  </div>
+</div>

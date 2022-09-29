@@ -1,0 +1,30 @@
+---
+import Project from "./Project/index.astro";
+import styles from "./Projects.module.scss";
+
+const PROJECTS = [
+  {
+    name: "Weather US National App",
+    description:
+      "Connects to public to the geocoding and weather REST APIs providing a specified address for display the 7-day forecast.",
+    github: "https://github.com/BrunoAderaldo/weather-us-national",
+    preview: "https://weather-us-national.vercel.app/",
+  },
+];
+---
+
+<section class={styles.section}>
+  <div class="container">
+    <h2 class={styles.title}>Projects</h2>
+    {
+      PROJECTS.map((project) => (
+        <Project
+          name={project.name}
+          description={project.description}
+          github={project.github}
+          preview={project.preview}
+        />
+      ))
+    }
+  </div>
+</section>
