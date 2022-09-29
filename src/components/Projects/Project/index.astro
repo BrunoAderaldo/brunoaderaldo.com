@@ -11,8 +11,8 @@ interface Props {
 const { name, description, github, preview } = Astro.props;
 ---
 
-<div class={styles.item}>
-  <h4 class={styles.name}>{name}</h4>
+<div>
+  <h3 class={styles.name}>{name}</h3>
   <p class={styles.description}>{description}</p>
 
   <div class={styles.actions}>
