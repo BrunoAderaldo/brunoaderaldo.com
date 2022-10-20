@@ -36,12 +36,12 @@ body {
   -webkit-font-smoothing: antialiased; /* 2 */
 }
 
-strong {
-  font-weight: 600;
+strong,
+b {
+  font-weight: 700;
 }
 
 section {
-  background-color: $bg-white;
   padding-inline: 1.25rem;
   padding-block: 1rem;
 }

@@ -1,9 +1,18 @@
 @import "../../styles/variables.scss";
 
 .section {
-  background-color: $bg-primary;
   padding-block: 4rem 2.5rem;
   margin-bottom: 1rem;
+
+  span {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 3rem;
+    margin-bottom: 0.75rem;
+  }
 
   p {
     line-height: 2.125rem;
@@ -13,11 +22,4 @@
       margin-bottom: 0;
     }
   }
-}
-
-.title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 2.25rem;
-  margin-bottom: 0.75rem;
 }
