@@ -7,19 +7,26 @@ import Projects from "@components/Projects/index.astro";
 
 <Layout
   title="Bruno Aderaldo — Frontend Developer"
-  description="Bruno Aderaldo is a Frontend Developer with over five years of experience building web-based applications with a focus on simplicity & usability."
+  description="Bruno is a Frontend Developer with over five years of experience building web-based applications with a focus on simplicity & usability."
 >
   <main>
     <Hero
-      title="I'm Bruno Aderaldo — Frontend Developer"
-      description={`<p>With over five years of experience building web-based applications with a focus on simplicity & usability.</p>
-
-      <p>Building unique experiences with Jamstack and server-side rendering at <strong>Bejamas</strong>.</p>`}
+      title={`
+        <h1>
+          <span>Hi, my name is</span>
+          <b>Bruno Aderaldo</b>.
+        </h1>
+      `}
+      description={`
+        <p>With over five years of experience building web-based applications with a focus on simplicity & usability. Building unique experiences with Jamstack and server-side rendering at <strong>Bejamas</strong>.</p>
+      `}
     />
+
     <Section
       title="Favorite tools"
-      description="React, Next.js, TypeScript, HeadlessCMS, Node.js, Prisma."
+      description="React, Next.js, TypeScript, GraphQL, Headless CMS, Node.js and Prisma."
     />
+
     <Projects />
   </main>
 </Layout>
