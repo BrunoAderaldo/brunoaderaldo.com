@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: rem(36px) 5vw;
+
+  @include media(tablet) {
+    padding: rem(36px) 8vw;
+  }
+
+  @include media(tablet-big) {
+    padding: rem(48px) 10vw;
+  }
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.navList {
+  display: inline-flex;
+  gap: 1rem;
+
+  @include media(mobile) {
+    gap: 1.5rem;
+  }
+}
+
+.navLink {
+  font-size: rem(14px);
+  text-decoration: none;
+
+  @include media(mobile) {
+    font-size: rem(16px);
+  }
+
+  @include media(tablet) {
+    font-size: rem(18px);
+  }
+}
+
+// .menuToggle {
+//   color: $purple;
+//   font-size: rem(16px);
+//   font-weight: $font-weight-regular;
+
+//   @include media(mobile) {
+//     display: none;
+//   }
+// }

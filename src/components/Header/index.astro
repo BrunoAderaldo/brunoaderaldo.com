@@ -1,0 +1,21 @@
+---
+import { Heading } from "@/components/elements";
+import styles from "./header.module.scss";
+---
+
+<nav class={styles.nav}>
+  <a href="/" class={styles.logo}>
+    <Heading>Bruno Aderaldo</Heading>
+  </a>
+
+  <ul class={styles.navList}>
+    <li>
+      <a href="/about" class={styles.navLink}>About.</a>
+    </li>
+    <li>
+      <a href="/about" class={styles.navLink}>Blog.</a>
+    </li>
+  </ul>
+
+  <!-- <button class={styles.menuToggle}>Menu</button> -->
+</nav>
