@@ -1,0 +1,13 @@
+---
+import styles from "./container.module.scss";
+
+interface Props extends astroHTML.JSX.HtmlHTMLAttributes {
+  as?: "div" | "section" | "article" | "main";
+  class?: string;
+}
+const { as: Element = "div", class: className } = Astro.props;
+---
+
+<Element class:list={[styles.container, className]}>
+  <slot />
+</Element>

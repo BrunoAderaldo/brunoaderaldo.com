@@ -1,17 +1,14 @@
 ---
-import styles from "./Hero.module.scss";
+import { Heading } from "@/components/elements";
+import styles from "./hero.module.scss";
 
 interface Props {
   title: string;
-  description: string;
 }
 
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<section class={styles.section}>
-  <div class="container">
-    <Fragment set:html={title} />
-    <Fragment set:html={description} />
-  </div>
-</section>
+<header class={styles.header}>
+  <Heading as="h2">{title}</Heading>
+</header>

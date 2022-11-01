@@ -1,0 +1,25 @@
+@function containerSize($width) {
+  @return calc(#{$width} + #{$container-padding});
+}
+
+$container-sizes: (
+  tablet-big: containerSize(rem(936px)),
+  laptop: containerSize(rem(1014px)),
+  desktop: containerSize(rem(1254px)),
+);
+
+@mixin generateContainerMedia {
+  @each $bp, $container-size in $container-sizes {
+    @include media($bp) {
+      max-width: $container-size;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 calc(#{$container-padding} / 2);
+
+  @include generateContainerMedia;
+}
