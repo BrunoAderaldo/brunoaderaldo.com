@@ -1,0 +1,18 @@
+@mixin font(
+  $size,
+  $weight,
+  $line-height: 100%,
+  $family: _,
+  $transform: none,
+  $margin: 0
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-transform: $transform;
+  margin: $margin;
+
+  @if $family != "_" {
+    font-family: $family;
+  }
+}

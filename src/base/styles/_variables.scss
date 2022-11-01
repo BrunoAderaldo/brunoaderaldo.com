@@ -1,0 +1,49 @@
+// ~~~~~~~~~~~~~ 1. Colors ~~~~~~~~~~~~~
+$blue: #262861;
+$yellow: #ffd08d;
+$purple: #6138d8;
+$purple-light: #f2eefc;
+
+// ~~~~~~~~~~~~~ 2. Fonts ~~~~~~~~~~~~~
+
+// Font families
+$font-primary: Poppins;
+
+// Font weights
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// Font sizes
+$font-size-xxs: rem(14px);
+$font-size-xs: rem(16px);
+$font-size-s: rem(20px);
+$font-size-m: rem(24px);
+$font-size-l: rem(28px);
+$font-size-xl: rem(32px);
+$font-size-xxl: rem(40px);
+$font-size-xxxl: rem(72px);
+
+// Line heights
+$line-height-small: 100%;
+$line-height-medium: 125%;
+$line-height-big: 140%;
+
+// ~~~~~~~~~~~~~ 3. Spacings ~~~~~~~~~~~~~
+
+// Margins and paddings
+$spacing-xxxxs: rem(8px);
+$spacing-xxxs: rem(16px);
+$spacing-xxs: rem(24px);
+$spacing-xs: rem(32px);
+$spacing-s: rem(40px);
+$spacing-m: rem(48px);
+$spacing-l: rem(56px);
+$spacing-xl: rem(64px);
+$spacing-xxl: rem(96px);
+$spacing-xxxl: rem(128px);

@@ -1,0 +1,15 @@
+---
+import styles from "./heading.module.scss";
+
+export interface Props extends astroHTML.JSX.HtmlHTMLAttributes {
+  as?: "h1" | "h2" | "h3" | "h3" | "h4" | "h5" | "h6";
+  class?: string;
+}
+const { class: className = "", as = "h1" } = Astro.props;
+
+const Element = as;
+---
+
+<Element class:list={[styles[as], className]}>
+  <slot />
+</Element>

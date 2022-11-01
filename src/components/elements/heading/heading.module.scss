@@ -1,0 +1,49 @@
+.h1 {
+  @include font(rem(20px), $font-weight-bold, rem(30px));
+
+  @include media(mobile) {
+    font-size: rem(22px);
+  }
+
+  @include media(tablet) {
+    font-size: rem(24px);
+  }
+}
+
+.h2 {
+  @include font(rem(34px), $font-weight-bold, $line-height-big);
+
+  @include media(tablet) {
+    font-size: rem(40px);
+  }
+
+  @include media(tablet-big) {
+    font-size: rem(51px);
+  }
+}
+
+.h3 {
+  @include font($font-size-m, $font-weight-bold, $line-height-medium);
+
+  @include media(tablet) {
+    font-size: $font-size-l;
+  }
+}
+
+.h4 {
+  @include font($font-size-s, $font-weight-bold, $line-height-big);
+}
+
+.h5 {
+  @include font($font-size-xs, $font-weight-bold, $line-height-big);
+}
+
+.h6 {
+  @include font(
+    $font-size-xxs,
+    $font-weight-bold,
+    $line-height-big,
+    _,
+    uppercase
+  );
+}

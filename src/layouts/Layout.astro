@@ -1,54 +1,36 @@
 ---
-import "../styles/global.scss";
+import "@/base/styles/globals.scss";
 
-export interface Props {
-  title: string;
-  description: string;
-  permalink?: string;
-  image?: string;
-}
+import { SEO, Header } from "@/components";
 
-const { title, description, permalink, image } = Astro.props;
+const { seo } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#f4f6fe" />
 
-    <!-- Open Graph Tags (Facebook) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    {permalink && <meta property="og:url" content={permalink} />}
-    {description && <meta property="og:description" content={description} />}
-    {image && <meta property="og:image" content={image} />}
+    <SEO seo={seo} />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
-    {permalink && <meta property="twitter:url" content={permalink} />}
     {
-      description && (
-        <meta property="twitter:description" content={description} />
+      import.meta.env.PROD && (
+        <script async src="https://cdn.splitbee.io/sb.js" />
       )
     }
-    {image && <meta property="twitter:image" content={image} />}
-
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
   </head>
 
   <body>
+    <Header />
     <slot />
   </body>
 </html>

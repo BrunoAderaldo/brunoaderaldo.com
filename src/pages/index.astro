@@ -1,32 +1,30 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Hero from "@components/Hero/index.astro";
-import Section from "@components/Section/index.astro";
-import Projects from "@components/Projects/index.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Container, Heading } from "@/components/elements";
+import Hero from "@/components/hero/hero.astro";
 ---
 
 <Layout
-  title="Bruno Aderaldo — Frontend Developer"
-  description="Bruno is a Frontend Developer with over five years of experience building web-based applications with a focus on simplicity & usability."
+  seo={{
+    title: "Bruno Aderaldo — Frontend Developer",
+    description:
+      "Bruno is a Frontend Developer with over five years of experience building web-based applications with a focus on simplicity & usability.",
+  }}
 >
-  <main>
+  <Container as="main">
     <Hero
-      title={`
-        <h1>
-          <span>Hi, my name is</span>
-          <b>Bruno Aderaldo</b>.
-        </h1>
-      `}
-      description={`
-        <p>With over five years of experience building web-based applications with a focus on simplicity & usability. Building unique experiences with Jamstack and server-side rendering at <strong>Bejamas</strong>.</p>
-      `}
+      title="Creating faster, more secure and more reliable websites with Jamstack."
     />
 
-    <Section
-      title="Favorite tools"
-      description="React, Next.js, TypeScript, GraphQL, Headless CMS, Node.js and Prisma."
-    />
+    <Heading as="h2">Find the latest of my writing here.</Heading>
 
-    <Projects />
-  </main>
+    <Heading as="h2">Let’s work together.</Heading>
+
+    <p>
+      If you have a website or mobile app idea in mind or you need some advice,
+      feel free to contact me.
+    </p>
+
+    <a href="mailto:hello@brunoaderaldo.com">hello@brunoaderaldo.com</a>
+  </Container>
 </Layout>

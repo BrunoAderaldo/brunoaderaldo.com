@@ -1,0 +1,164 @@
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-extralight-webfont",
+  $font-weight-extra-light
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-light-webfont",
+  $font-weight-light
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-regular-webfont",
+  $font-weight-regular
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-medium-webfont",
+  $font-weight-medium
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-semibold-webfont",
+  $font-weight-semi-bold
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-bold-webfont",
+  $font-weight-bold
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-extrabold-webfont",
+  $font-weight-extra-bold
+);
+
+@include fontFace(
+  $font-primary,
+  "fonts/poppins-black-webfont",
+  $font-weight-black
+);
+
+html,
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+// Part of Wipe.css
+// https://github.com/danilowoz/wipe.css
+
+/**
+ * 1. Prevent certain mobile browsers from automatically zooming fonts.
+ * 2. Border box sizing
+ * 3. Default scroll behavior (not smooth)
+ */
+
+html {
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
+  box-sizing: border-box; /* 2 */
+  scroll-behavior: auto; /* 3 */
+}
+
+/**
+ * 1. Set default font styles
+ * 2. Beautiful fonts again
+ * 3. Prevent horizontal scroll
+ */
+
+body {
+  color: $blue;
+  -moz-osx-font-smoothing: grayscale; /* 2 */
+  -webkit-font-smoothing: antialiased; /* 2 */
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: underline;
+}
+
+/*
+  The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+  GitHub page: https://github.com/elad2412/the-new-css-reset
+*/
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/*
+  fix the feature of 'hidden' attribute.
+  display:revert; revert to element instead of attribute
+*/
+:where([hidden]) {
+  display: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}

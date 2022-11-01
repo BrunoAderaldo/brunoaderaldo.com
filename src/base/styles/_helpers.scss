@@ -1,0 +1,13 @@
+@use "sass:math";
+
+@function stripUnit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+$html-font-size: 16px;
+
+@function rem($px-value) {
+  @return #{math.div(stripUnit($px-value), stripUnit($html-font-size))}rem;
+}
+
+$container-padding: calc(rem(24px) * 2);

@@ -1,0 +1,50 @@
+---
+import SiteConfig from "@/base/utils/site-config";
+
+type SEO = {
+  title: string;
+  description: string;
+  permalink?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+};
+
+export interface Props {
+  seo: SEO;
+}
+
+const {
+  title,
+  description,
+  permalink,
+  ogImage,
+  ogType = "website",
+} = Astro.props.seo;
+
+const { seoMetadata: defaultSeoMetadata } = SiteConfig;
+const metaTitle = `${title || defaultSeoMetadata.title}`;
+const metaDescription = description || defaultSeoMetadata.description;
+const metaUrl = defaultSeoMetadata.siteUrl;
+---
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<meta property="og:title" content={metaTitle} />
+<meta property="og:url" content={metaUrl} />
+<meta property="og:type" content={ogType} />
+<meta property="og:locale" content={defaultSeoMetadata.defaultLocale} />
+<meta property="og:site_name" content={defaultSeoMetadata.siteName} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={defaultSeoMetadata.twitter.creator} />
+<meta name="twitter:creator" content={defaultSeoMetadata.twitter.creator} />
+<meta name="twitter:title" content={metaTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:url" content={metaUrl} />
+<meta name="twitter:image" content={ogImage} />
