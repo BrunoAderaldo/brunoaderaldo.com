@@ -1,8 +1,18 @@
 {
-  "name": "@example/basics",
+  "name": "brunoaderaldo.com",
+  "description": "My personal website.",
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "author": "@BrunoAderaldo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoAderaldo/brunoaderaldo.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrunoAderaldo/brunoaderaldo.com/issues"
+  },
+  "homepage": "https://github.com/BrunoAderaldo/brunoaderaldo.com#readme",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -15,6 +25,8 @@
     "astro": "^1.3.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
     "sass": "^1.55.0"
   }
 }
