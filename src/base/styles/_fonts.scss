@@ -1,0 +1,28 @@
+@use "sass:list";
+
+@mixin fontFace(
+  $name,
+  $path,
+  $weight: $font-weight-medium,
+  $style: normal,
+  $display: swap,
+  $extensions: woff2 woff
+) {
+  $src: null;
+
+  @each $extension in $extensions {
+    $src: list.append(
+      $src,
+      url("/#{$path}.#{$extension}") format("#{$extension}"),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: $name;
+    src: $src;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}
